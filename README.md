@@ -3,6 +3,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Controls](#controls)
+* [Sources](#Sources)
 
 ## General info
 This project is an RTOS implementation of a traffic light using a developement board and a couple push buttons.
@@ -24,7 +25,7 @@ Note: these steps are intended for use on Fedora Linux computer and have been te
 ```
 $ sudo dnf install stlink
 ```
-4. Follow the tutorial of "Learn embedded systems with George" to install the ARM Embedded Toolchain. (The link is found below.)
+4. Follow the tutorial of "Learn embedded systems with George" to install the ARM Embedded Toolchain. (The link is found below in the Sources section.)
 5. Install the dependencies of the ARM Embedded Toolchain by running the following command:
 ```
 $ sudo dnf install ncurses-compat-libs
@@ -47,4 +48,8 @@ $ st-flash write ./build/*.bin 0x8000000
 To start the traffic light, press and hold the button connected to PE0. This will trigger the FSM to flash a red LED on the Discovery Board, then a green LED will flash.
 Pressing and holding the button connected to PE1 will  trigger the FSM to flash a red LED for a second, then a yellow LED for a second
 before switching to a red LED for another second.
+
+## Sources
+This project uses the tutorial of "Learn embedded systems with George" to install the GUN ARM Embedded Toolchain:
+https://youtu.be/imUiQkO9YHM
 
